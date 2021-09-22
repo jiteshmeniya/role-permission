@@ -1,4 +1,14 @@
 @extends('layouts.app')
+@push('script')
+<script type="text/javascript">
+    $('select').on('change', function() {
+        $("select option:selected").each(function () {
+                $('#price').val($(this).attr('data-price'));
+        });
+
+    });
+</script>
+@endpush
 @section('content')
 <div class="container">
     <div class="justify-content-center">
@@ -20,14 +30,19 @@
             </div>
 
             <div class="card-body">
-                {!! Form::open(array('route' => 'posts.store', 'method'=>'POST')) !!}
+                {!! Form::open(array('route' => 'snacks.store', 'method'=>'POST')) !!}
                     <div class="form-group">
-                        <strong>Title:</strong>
-                        {!! Form::text('title', null, array('placeholder' => 'Title','class' => 'form-control')) !!}
+                        <strong>Snack</strong>
+                        <select class=" form-control" data-placeholder="category" style="width: 100%;" name="snack_id" id="snack">
+                                <option selected disabled>Please select snack</option>
+                            @foreach ($data as $snack )
+                                <option {{ $snack->id == old('snack_id') ? 'selected' : '' }} data-price={{ $snack->price }} value="{{ $snack->id }}" >{{ $snack->id }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
-                        <strong>Body:</strong>
-                        {!! Form::textarea('body', null, array('placeholder' => 'Body','class' => 'form-control')) !!}
+                        <strong>Price</strong>
+                        <input type="text" id="price" name="price">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 {!! Form::close() !!}
@@ -35,4 +50,5 @@
         </div>
     </div>
 </div>
+
 @endsection

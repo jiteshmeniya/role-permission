@@ -18,9 +18,8 @@
                     <a class="btn btn-primary" href="{{ route('posts.index') }}">Posts</a>
                 </span>
             </div>
-
             <div class="card-body">
-                {!! Form::open(array('route' => 'posts.store', 'method'=>'POST')) !!}
+                {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method'=>'PATCH']) !!}
                     <div class="form-group">
                         <strong>Title:</strong>
                         {!! Form::text('title', null, array('placeholder' => 'Title','class' => 'form-control')) !!}

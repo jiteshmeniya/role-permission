@@ -9,6 +9,11 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  @stack('style')
 </head>
 <body>
     <div id="app">
@@ -22,48 +27,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto"></ul>
-                    <ul class="navbar-nav ml-auto">
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            @can('user-list')
-                                <li><a class="nav-link" href="{{ route('users.index') }}">Users</a></li>
-                            @endcan
-                            @can('role-list')
-                                <li><a class="nav-link" href="{{ route('roles.index') }}">Roles</a></li>
-                            @endcan
-                            @can('permission-list')
-                                <li><a class="nav-link" href="{{ route('permissions.index') }}">Permission</a></li>
-                            @endcan
-                            @can('post-list')
-                                <li><a class="nav-link" href="{{ route('posts.index') }}">Posts</a></li>
-                            @endcan
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                    @include('layouts.includes.navbar')
                 </div>
             </div>
         </nav>
@@ -71,5 +35,6 @@
             @yield('content')
         </main>
     </div>
+    @stack('script')
 </body>
 </html>
