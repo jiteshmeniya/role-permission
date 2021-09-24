@@ -12,6 +12,8 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
         "laravelcollective/html": "^6.2",
+        "livewire/livewire": "^2.6",
+        "maatwebsite/excel": "^3.1",
         "spatie/laravel-permission": "^4.2"
     },
     "require-dev": {
