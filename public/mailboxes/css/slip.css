@@ -1,0 +1,64 @@
+body {
+  background: rgb(204, 204, 204);
+}
+page {
+  background: white;
+  display: block;
+  margin: auto;
+  margin-top: 1cm;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  padding: 1cm;
+  font-size: 14px;
+}
+page[size="A4"] {
+  width: 21cm;
+  height: 29.7cm;
+}
+
+@media print {
+  body,
+  page {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+
+#logo {
+  position: relative;
+}
+#logo img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+#logobawah {
+  position: relative;
+}
+#logobawah img {
+  position: absolute;
+  top: 970px;
+  left: -33px;
+}
+
+#title {
+  position: inherit;
+  top: 200px;
+}
+/** Define the header rules **/
+.container img {
+  width: 192px;
+  height: auto;
+  /* align-content: stretch; */
+}
+
+.container table {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.container table td {
+  background-color: #ffffff;
+  border-bottom: 0.5px solid #868686;
+}

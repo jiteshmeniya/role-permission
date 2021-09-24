@@ -1,0 +1,27 @@
+.panel-heading.note-toolbar .note-para .dropdown-toggle.list-styles {
+	width: 1.5rem;
+	padding-left: .5rem;
+}
+.panel-heading.note-toolbar .dropdown-list-styles {
+	padding: .5rem 0 !important;
+	min-width: 12rem !important;
+}
+.dropdown-list-styles > li {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.dropdown-list-styles > li > div > ol {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.dropdown-list-styles > li:hover {
+	cursor:pointer;
+	background-color:#cccccc;
+}
+.dropdown-list-styles > li > div i {
+	display:none;
+}
+.dropdown-list-styles > li > div.checked i {
+	display:inline;
+	color: #17aa1c;
+}

@@ -1,0 +1,259 @@
+#memo {
+  color: navy;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+  vertical-align: bottom;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  #memo {
+    color: navy;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 24px;
+    vertical-align: bottom;
+    width: 100%;
+  }
+}
+
+#memo-body {
+  padding: 2rem;
+  font-size: 10px;
+}
+#memo-body ol {
+  padding-left: 2%;
+}
+@media (min-width: 992px) {
+  #memo-body {
+    padding: 2rem;
+    font-size: 12px;
+  }
+}
+
+#qrcode {
+  height: 65px;
+}
+@media (min-width: 992px) {
+  #qrcode {
+    height: 85px;
+  }
+}
+
+#kawisata {
+  color: rgb(247, 148, 0);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 14px;
+  vertical-align: text-top;
+}
+@media (min-width: 992px) {
+  #kawisata {
+    color: rgb(247, 148, 0);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 18px;
+  }
+}
+
+#logomemo {
+  height: 65px;
+}
+@media (min-width: 992px) {
+  #logomemo {
+    height: 75px;
+  }
+
+  #logomemo td {
+    width: 25%;
+  }
+}
+
+#nomor tr {
+  vertical-align: text-top;
+}
+
+#nomor td {
+  padding-right: 5px;
+}
+
+.memo {
+  position: relative;
+}
+
+.memo-item {
+  display: block;
+  width: 100%;
+  /* padding: 0.25rem 1rem; */
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+.memo-item:hover,
+.memo-item:focus {
+  color: #1e2125;
+  background-color: #e9ecef;
+}
+.memo-item.active,
+.memo-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0d6efd;
+}
+.memo-item.disabled,
+.memo-item:disabled {
+  color: #adb5bd;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-header {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  color: #6c757d;
+  white-space: nowrap;
+}
+
+.memo-item-text {
+  display: block;
+  padding: 0.25rem 1rem;
+  color: #212529;
+}
+
+#sb-topnav {
+  height: 56px;
+  z-index: 1039;
+}
+
+#memo-page {
+  page-break-after: always;
+}
+
+#ttd {
+  page-break-inside: avoid;
+}
+
+li {
+  page-break-inside: avoid;
+}
+
+#ttd td {
+  margin-top: 15px;
+}
+#memo-page {
+  overflow: visible !important;
+}
+
+@media print {
+  @page {
+    size: 210mm 297mm;
+    margin: 20mm 20mm 15mm 20mm;
+  }
+  #memo-page {
+    overflow: visible !important;
+  }
+  #memo-body {
+    padding: 0;
+    padding-bottom: 15px;
+  }
+
+  article {
+    display: none;
+  }
+  button {
+    display: none;
+  }
+
+  hgroup {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+
+  header {
+    display: none;
+  }
+
+  #cetak {
+    display: none;
+  }
+
+  main {
+    min-height: unset;
+    /* position: absolute; */
+    margin-top: -65px;
+    /* padding-bottom: 50mm; */
+    padding-left: 0;
+    padding-right: 0;
+    /* margin-bottom: 50mm; */
+  }
+
+  main .card {
+    border: none;
+  }
+
+  .page-footer,
+  .page-footer-space {
+    height: 40px;
+  }
+
+  .page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 0.5px solid rgb(116, 116, 116); /* for demo */
+    padding-right: 25px;
+  }
+
+  tfoot {
+    display: table-footer-group;
+  }
+}
+
+#layoutSidenav #cetak {
+  margin-left: -225px;
+  z-index: 1;
+  background-color: #d4c9e7;
+  position: sticky;
+  top: 66px;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  flex-grow: 1;
+  /* min-height: calc(100vh - 122px); */
+  margin-left: 0;
+  padding: 0.5em;
+  /* height: 85px; */
+}
+
+.garis {
+  position: fixed;
+  background-color: orange;
+  height: 10px;
+  top: 56px;
+  z-index: 1038;
+}
+
+.sb-nav-fixed #layoutSidenav #layoutSidenav_nav .sb-sidenav {
+  padding-top: 66px;
+}
+
+#layoutSidenav #layoutSidenav_content {
+  min-height: calc(100vh - 66px);
+  /* max-height: calc(100vh - 66px); */
+}
+
+.sb-nav-fixed #layoutSidenav #layoutSidenav_content {
+  padding-left: 225px;
+  top: 66px;
+}

@@ -1,24 +1,74 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production"
-    },
-    "devDependencies": {
-        "axios": "^0.21",
-        "bootstrap": "^4.6.0",
-        "jquery": "^3.6",
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "popper.js": "^1.16.1",
-        "postcss": "^8.1.14",
-        "resolve-url-loader": "^4.0.0",
-        "sass": "^1.32.11",
-        "sass-loader": "^11.0.1"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "devDependencies": {
+    "axios": "^0.21",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6",
+    "laravel-mix": "^6.0.31",
+    "lodash": "^4.17.19",
+    "popper.js": "^1.16.1",
+    "postcss": "^8.1.14",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.32.11",
+    "sass-loader": "^11.0.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "name": "brain-bootstrap",
+  "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\"></a></p>",
+  "version": "1.0.0",
+  "main": "webpack.mix.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "ansi-styles": "^3.2.1",
+    "binary-extensions": "^2.2.0",
+    "big.js": "^5.2.2",
+    "commander": "^7.2.0",
+    "colorette": "^1.3.0",
+    "color-convert": "^1.9.3",
+    "emojis-list": "^3.0.0",
+    "envinfo": "^7.8.1",
+    "escape-string-regexp": "^1.0.5",
+    "fastest-levenshtein": "^1.0.12",
+    "color-name": "^1.1.3",
+    "function-bind": "^1.1.1",
+    "fsevents": "^2.3.2",
+    "follow-redirects": "^1.14.1",
+    "get-stream": "^6.0.1",
+    "has-flag": "^3.0.0",
+    "glob-parent": "^5.1.2",
+    "has": "^1.0.3",
+    "interpret": "^2.2.0",
+    "is-extglob": "^2.1.1",
+    "is-binary-path": "^2.1.0",
+    "human-signals": "^2.1.0",
+    "is-core-module": "^2.5.0",
+    "is-glob": "^4.0.1",
+    "is-plain-object": "^2.0.4",
+    "is-number": "^7.0.0",
+    "is-stream": "^2.0.1",
+    "isexe": "^2.0.0",
+    "isobject": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiteshmeniya/role-permission.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiteshmeniya/role-permission/issues"
+  },
+  "homepage": "https://github.com/jiteshmeniya/role-permission#readme"
 }
